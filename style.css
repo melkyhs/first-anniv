@@ -6,12 +6,12 @@
     --env-bottom: #f2d8db;
     --env-top: #efd0d4;
     --paper-color: #ffffff;
-    --seal-color1: #a02030;
+    --seal-color1: #8b5a2b; /* Mocha Brown */
 }
 
 body {
     background: #fffdf9;
-    font-family: \'Poppins\', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -21,7 +21,7 @@ body {
     background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(160, 32, 48, 0.4);
+    background: rgba(139, 90, 43, 0.4);
     border-radius: 10px;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .seal {
-    background: radial-gradient(circle at top left, #dc3545, var(--seal-color1));
+    background: radial-gradient(circle at top left, #d2b48c, var(--seal-color1));
 }
 
 .tooltip {
@@ -187,7 +187,7 @@ body {
     transform: translate(-50%, -50%) !important;
     margin: 0 !important;
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    background-image: repeating-linear-gradient(transparent, transparent 29px, rgba(160, 32, 48, 0.05) 29px, rgba(160, 32, 48, 0.05) 30px);
+    background-image: repeating-linear-gradient(transparent, transparent 29px, rgba(139, 90, 43, 0.05) 29px, rgba(139, 90, 43, 0.05) 30px);
     background-attachment: local;
     border-radius: 8px;
     padding: 30px;
@@ -198,7 +198,7 @@ body {
     transition: opacity 0.5s;
     flex: 1;
     overflow-y: auto;
-    font-family: \'Caveat\', cursive;
+    font-family: 'Caveat', cursive;
     font-size: 1.25rem;
 }
 .is-reading .letter-content-wrapper {
