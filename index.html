@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For You, Anna 💌</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-hidden flex items-center justify-center min-h-[100dvh] m-0 touch-pan-x touch-pan-y relative bg-[#fffdf9]">
+
+    <canvas id="magic-canvas" class="absolute inset-0 pointer-events-none z-0"></canvas>
+    
+    <div class="reading-backdrop"></div>
+
+    <div class="scene w-full h-full flex items-center justify-center relative z-10 perspective-[1000px]">
+        
+        <div id="float-wrapper" class="float-wrapper">
+            <div class="tooltip font-sans" style="display: none;"></div>
+            <div id="envelope-wrapper" class="envelope-wrapper relative cursor-pointer z-10" onclick="toggleMail()">
+                
+                <div class="envelope relative shadow-xl rounded-md w-[340px] h-[230px] sm:w-[400px] sm:h-[260px] shrink-0" style="background-color: var(--env-bg-inner);">
+
+                    <div id="letter" class="letter">
+                        <div class="letter-content-wrapper custom-scrollbar">
+                            <div class="date text-right text-[0.8rem] text-rose-800 mb-2 tracking-widest uppercase opacity-60 font-sans">
+                                2 November 2025
+                            </div>
+                            <div class="fade-text pb-10">
+                                <h1 class="text-3xl sm:text-4xl text-rose-800 font-bold mb-6 text-center leading-tight">
+                                    Happy 1st Anniversary, bby ✤
+                                </h1>
+                                <p class="mb-4 text-gray-800 leading-relaxed">
+                                    Dearest Anna,
+                                </p>
+                                <p class="mb-4 text-gray-800 leading-relaxed">
+                                    I've been sitting here trying to find the perfect words to describe what this journey with you has meant to me, but honestly, no dictionary has enough words to capture it. On our very first anniversary, I just want you to know how much you truly mean to me.
+                                </p>
+                                <p class="mb-4 text-gray-800 leading-relaxed">
+                                    You aren't just my girlfriend, you are my partner, my best friend, and as that little note says, you are my home. In the middle of all the deadlines, the long days at the office, and the heavy stress of finishing my thesis, you are the one place where I can finally breathe. You are the peace I look forward to at the end of every day.
+                                </p>
+                                <p class="mb-4 text-gray-800 leading-relaxed">
+                                    You are absolutely gorgeous, not just in the way you look, but in the way you care, the way you laugh, and the way you've stayed by my side through everything. You fill my life with a kind of joy and excitement that I never knew I was missing until I met you.
+                                </p>
+                                <p class="mb-4 text-gray-800 leading-relaxed">
+                                    I also want to take this moment to say I'm sorry. I know I haven't been the easiest person to be with lately. I'm sorry for the times I was too focused on my things, for the moments I was distant or irritable because of the pressure of my defense, and for all the times I let my stress get in the way of us. Thank you for being so patient with my mistakes and for never letting go of my hand.
+                                </p>
+                                <p class="mb-4 text-gray-800 leading-relaxed">
+                                    As we celebrate our very first year together, I make this promise to you: I will keep showing up for us. I promise to give you the love, the care, and the happiness that you so deeply deserve. Thank you for being the best part of my life and for making every moment feel like an adventure.   
+                                </p>
+                                <p class="mb-8 text-gray-800 leading-relaxed">
+                                    I'm so proud of us, and I'm even more excited for everything the future holds.
+                                </p>
+
+                                <div class="text-right">
+                                    <p class="text-2xl text-rose-800 font-bold pb-2">
+                                        Happy 1st Anniversary, Love.
+                                    </p>
+                                    <p class="text-[1rem] text-rose-900/60 italic font-sans font-light">
+                                        Forever sounds like a good start with you.      
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fold left-fold z-[3]"></div>
+                    <div class="fold right-fold z-[3]"></div>
+                    <div class="fold bottom-fold z-[4]"></div>
+                    <div id="top-flap" class="fold top-fold z-[5] drop-shadow-md origin-top transition-transform duration-700 ease-in-out"></div>
+
+                    <div id="seal" class="seal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[10px] w-[60px] h-[60px] rounded-full z-[6] flex/items-center justify-center transition-all duration-300 shadow-xl cursor-pointer">
+                        <img src="data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='48' fill='%23a02030'/><circle cx='50' cy='50' r='40' fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-dasharray='4,4' opacity='0.5'/><path d='M50 30 C50 30 30 20 20 40 C10 60 40 70 50 85 C60 70 90 60 80 40 C70 20 50 30 50 30' fill='%23ffffff' opacity='0.9'/></svg>" class="w-full h-full object-container pointer-events-none drop-shadow-md ">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="shadow-caster"></div>
+        </div>
+
+        <div id="close-btn" style="display: none;"></div>
+
+    </div>
+
+    <!-- Audios for Effects -->
+    <audio id="audio-pop" src="https://assets.mixkit.co/sfx/preview/mixkit-bubble-pop-up-14.mp3"></audio>
+    <audio id="audio-paper" src="https://assets.mixkit.co/sfx/preview/mixkit-paper-slide-1509.mp3"></audio>
+    <audio id="audio-bgm" src="https://assets.mixkit.co/music/preview/mixkit-beautiful-dream-493.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
