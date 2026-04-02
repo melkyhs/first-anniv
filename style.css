@@ -1,12 +1,12 @@
 /* Theme Variables & Reset */
 :root {
-    --env-bg-inner: #f1d3d6; 
-    --env-left: #f8e1e4;
-    --env-right: #f8e1e4;
-    --env-bottom: #f2d8db;
-    --env-top: #efd0d4;
+    --env-bg-inner: #ffffff;
+    --env-left: #fde7ef;
+    --env-right: #fde7ef;
+    --env-bottom: #fbe4ee;
+    --env-top: #f9c7da;
     --paper-color: #ffffff;
-    --seal-color1: #8b5a2b; /* Mocha Brown */
+    --seal-color1: #c2185b;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(139, 90, 43, 0.4);
+    background: rgba(219, 39, 119, 0.4);
     border-radius: 10px;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .seal {
-    background: radial-gradient(circle at top left, #d2b48c, var(--seal-color1));
+    background: radial-gradient(circle at top left, #f8bbd0, var(--seal-color1));
 }
 
 .tooltip {
@@ -187,7 +187,7 @@ body {
     transform: translate(-50%, -50%) !important;
     margin: 0 !important;
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    background-image: repeating-linear-gradient(transparent, transparent 29px, rgba(139, 90, 43, 0.05) 29px, rgba(139, 90, 43, 0.05) 30px);
+    background-image: repeating-linear-gradient(transparent, transparent 29px, rgba(219, 39, 119, 0.05) 29px, rgba(219, 39, 119, 0.05) 30px);
     background-attachment: local;
     border-radius: 8px;
     padding: 30px;
